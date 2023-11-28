@@ -1,6 +1,0 @@
-[submodule "libs/kpc"]
-	path = libs/kpc
-	url = git@github.com:NCSU-CSC512-Course-Project/part1-dev.git
-[submodule "libs/sifd"]
-	path = libs/sifd
-	url = git@github.com:NCSU-CSC512-Course-Project/part2-dev.git
