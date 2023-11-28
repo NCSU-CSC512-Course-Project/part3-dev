@@ -1,12 +1,14 @@
 // main.cpp
 // ~~~~~~~~
 // Main execution for the Integrated KPC and SIFD
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
 
+#include "Integrated.h"
+
 int main(void) {
-  
+
   // Get filename
   std::string filename;
   std::cout << "Enter a file name for analysis: ";
@@ -18,4 +20,5 @@ int main(void) {
     exit(EXIT_FAILURE);
   }
 
+  Integrator integrator(filename);
 }
