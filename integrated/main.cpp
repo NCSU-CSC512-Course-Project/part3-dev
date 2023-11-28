@@ -1,11 +1,10 @@
 // main.cpp
 // ~~~~~~~~
 // Main execution for the Integrated KPC and SIFD
+#include "Integrated.h"
 #include <fstream>
 #include <iostream>
 #include <string>
-
-#include "Integrated.h"
 
 int main(void) {
 
@@ -21,4 +20,7 @@ int main(void) {
   }
 
   Integrator integrator(filename);
+  std::string trace = integrator.getKpc().getBPTrace();
+  std::string highest = integrator.analyzeBPTrace(trace);
+  int highestLocation = integrator.getBranchPointLocation(highest);
 }

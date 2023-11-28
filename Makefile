@@ -20,6 +20,9 @@ EXE = $(BIN_DIR)/Integrated
 
 all: dirs main
 
+get_deps:
+	./pull_src.sh
+
 clean_out:
 	rm -f $(OUT_DIR)/*
 
