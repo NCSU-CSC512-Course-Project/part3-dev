@@ -1,0 +1,6 @@
+bin
+compile_commands.json
+out
+integrated/SeminalInputFeatureDetector.*
+integrated/KeyPointsCollector.*
+integrated/Common.h
