@@ -1,6 +1,6 @@
 # Makefile for Integrated Key Points detector 
 # and Seminal Input Features Detector
-CXX = clang++
+CXX = g++
 CXXFLAGS = -O0 -g3 -std=c++17
 LINKER_FLAGS = -lclang
 DBG_FLAGS = -DDEBUG=true
@@ -14,7 +14,7 @@ OUT_DIR = out
 
 SRC = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(OBJS_DIR)/%.o, $(SRC))
-EXE = $(BIN_DIR)/kpc
+EXE = $(BIN_DIR)/Integrated
 
 .PHONY: all main run
 
@@ -24,7 +24,7 @@ clean_out:
 	rm -f $(OUT_DIR)/*
 
 run: clean_out all
-	$(EXE) test_file.c
+	$(EXE)
 
 drun: all
 	$(EXE) test_file.c --debug
