@@ -23,5 +23,5 @@ int main(void) {
   std::string trace = integrator.getKpc().getBPTrace();
   std::string highest = integrator.analyzeBPTrace(trace);
   int highestLocation = integrator.getBranchPointLocation(highest);
-  QKDBG(highestLocation);
+  std::printf("The most encountered branch point is: %d\n", highestLocation);
 }

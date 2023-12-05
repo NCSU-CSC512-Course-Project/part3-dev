@@ -46,7 +46,7 @@ int Integrator::getBranchPointLocation(std::string bp) {
 
   // Get ref to branch dictionary
   std::map<unsigned, std::map<unsigned, std::string>> branchDict =
-      kpc.getBranchDictionary();
+      kpc->getBranchDictionary();
 
   for (const std::pair<unsigned, std::map<unsigned, std::string>> outer :
        branchDict) {
