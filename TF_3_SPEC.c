@@ -45,6 +45,7 @@
 /* Slightly modified for use in SPEC CPU by Cloyce D. Spradling (5 Nov 2009)
  * $Id: specrand.c 4397 2016-06-06 17:36:26Z CloyceS $
  */
+#include <stdio.h>
 #include <stdlib.h>
 #ifdef __cplusplus
 #define CLINK extern "C"
@@ -53,15 +54,14 @@
 #endif
 
 /* Period parameters */
-#define N 624
+const int N = 624;
 #define M 397
 #define MATRIX_A 0x9908b0dfUL   /* constant vector a */
 #define UPPER_MASK 0x80000000UL /* most significant w-r bits */
 #define LOWER_MASK 0x7fffffffUL /* least significant r bits */
-#include <stdio.h>
 
-static unsigned long mt[N]; /* the array for the state vector  */
-static int mti = N + 1;     /* mti==N+1 means mt[N] is not initialized */
+static unsigned long mt[624]; /* the array for the state vector  */
+static int mti = N + 1;       /* mti==N+1 means mt[N] is not initialized */
 
 /* initializes mt[N] with a seed */
 CLINK void spec_init_genrand(unsigned long s) {
