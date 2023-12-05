@@ -24,4 +24,5 @@ int main(void) {
   std::string highest = integrator.analyzeBPTrace(trace);
   int highestLocation = integrator.getBranchPointLocation(highest);
   std::printf("The most encountered branch point is: %d\n", highestLocation);
+  integrator.getSifd().cursorFinder();
 }
