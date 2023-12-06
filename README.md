@@ -86,7 +86,19 @@ make run
 ```
 You will be given a singular prompt to enter the name of the file which is being tested. Any edited files created by the KPC will be written to the out directory. Below is an example of the full shell output for the above program.
 ```
-INSERT OUTPUT HERE
+➜  part3-dev git:(main ↑1) make run
+rm -f out/*
+mkdir -p bin bin/objs out
+g++  bin/objs/Integrated.o  bin/objs/KeyPointsCollector.o  bin/objs/main.o  bin/objs/SeminalInputFeatureDetector.o -O0 -g3 -std=c++17 -lclang -o bin/Integrated
+bin/Integrated
+Enter a file name for analysis: TF_1_fib.c
+Translation unit for file: TF_1_fib.c successfully parsed.
+Translation unit for file: TF_1_fib.c successfully parsed.
+C compiler is: gcc
+Compilation Successful
+The most encountered branch point is: 23
+The Seminal Input Feature of this program is:
+Line 6: array
 ```
 # Testing (For Grader)
 All our chosen test files are prefixed with TF in the root directory, TF_3_SPEC.c is the chosen SPEC program for our testing.
